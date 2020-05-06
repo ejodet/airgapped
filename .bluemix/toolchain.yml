@@ -47,6 +47,7 @@ template:
   required:
   - gitlab00
 toolchain:
-  name: $env.toolchainName ? '{{toolchainName}}' :
+  name: >
+    $env.toolchainName ? '{{toolchainName}}' :
       'simple-toolchain-{{timestamp}}'
 version: 2
