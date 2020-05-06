@@ -45,5 +45,5 @@ template:
   description: Extracted from air-gapped Toolchain
   name: Create an air-gapped Toolchain
 toolchain:
-  name: Air-Gapped-{{timestamp}}
+  name: 'Air-Gapped-{{timestamp}}'
 version: 2
