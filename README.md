@@ -1,1 +1,1 @@
-# airgapped
+# test air-gapped template
