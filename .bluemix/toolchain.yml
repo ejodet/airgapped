@@ -1,0 +1,51 @@
+services:
+  gitlab00:
+    parameters:
+      api_root_url: http://mjgit.rtp.raleigh.ibm.com/api
+      authorized: f3ed0574-d5fa-48aa-bede-742901c1f157
+      blind_connection: true
+      enable_traceability: false
+      extra_capabilities:
+      - capability_id: git.issues
+        dashboard_url: http://mjgit.rtp.raleigh.ibm.com/ejodet/mytestproject/issues
+        display_name: Issues
+        enabled: false
+        label: mytestproject
+        readme: false
+        tags:
+        - think
+        - code
+      git_id: f3ed0574-d5fa-48aa-bede-742901c1f157
+      integration_owner: ""
+      label: mytestproject
+      owner_id: ejodet
+      private_repo: false
+      repo_name: mytestproject
+      repo_url: http://mjgit.rtp.raleigh.ibm.com/ejodet/mytestproject
+      source_repo_url: ""
+      token_url: https://otc-github-consolidated-broker.us-south.devops.dev.cloud.ibm.com/github/token?git_id=f3ed0574-d5fa-48aa-bede-742901c1f157
+      type: link
+    service_id: gitlab
+  sample-build:
+    parameters:
+      api_url: http://pipeline-service/pipeline/pipelines/d649a291-1310-4e0e-8526-df7391b56a3d
+      configuration:
+        content:
+          $text: pipeline_sample-build.yml
+      external_api_url: https://pipeline-service.us-south.devops.dev.cloud.ibm.com/pipeline/pipelines/d649a291-1310-4e0e-8526-df7391b56a3d
+      label: Air-Gapped
+      name: Air-Gapped
+      services:
+      - gitlab00
+      type: classic
+      ui-pipeline: true
+      ui_pipeline: true
+    service_id: pipeline
+template:
+  description: Extracted from air-gapped Toolchain
+  name: Create an air-gapped Toolchain
+  required:
+  - gitlab00
+toolchain:
+  name: 'Air-Gapped-{{timestamp}}'
+version: 2
