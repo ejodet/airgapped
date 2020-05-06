@@ -47,5 +47,6 @@ template:
   required:
   - gitlab00
 toolchain:
-  name: 'Air-Gapped-{{timestamp}}'
+  name: $env.toolchainName ? '{{toolchainName}}' :
+      'simple-toolchain-{{timestamp}}'
 version: 2
