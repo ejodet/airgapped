@@ -33,8 +33,8 @@ services:
         content:
           $text: pipeline_sample-build.yml
       external_api_url: https://pipeline-service.us-south.devops.dev.cloud.ibm.com/pipeline/pipelines/d649a291-1310-4e0e-8526-df7391b56a3d
-      label: Air-Gapped-pipeline
-      name: Air-Gapped-pipeline
+      label: AIR-GAPPED-0505
+      name: AIR-GAPPED-0505
       services:
       - ""
       type: classic
@@ -42,8 +42,8 @@ services:
       ui_pipeline: true
     service_id: pipeline
 template:
-  description: Extracted from air-gapped Toolchain
-  name: Create an air-gapped Toolchain
+  description: AIR-GAPPED-0505
+  name: Develop a Cloud Foundry app
 toolchain:
-  name: 'Air-Gapped-{{timestamp}}'
+  name: AIR-GAPPED-0505
 version: 2
