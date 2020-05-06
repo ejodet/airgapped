@@ -49,5 +49,5 @@ template:
 toolchain:
   name: >
     $env.toolchainName ? '{{toolchainName}}' :
-      'simple-toolchain-{{timestamp}}'
+      'air-gapped-{{timestamp}}'
 version: 2
